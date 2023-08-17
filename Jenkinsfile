@@ -13,7 +13,7 @@ pipeline {
                     echo "PR Number: ${prNumber}"
                     sh "git fetch origin pull/${prNumber}/merge:pr${prNumber}"
                     checkout([$class: 'GitSCM',
-                        userRemoteConfigs: [[url: 'https://github.com/sumamohan143/my-pr-content.git']],
+                        userRemoteConfigs: [[url: 'https://github.com/sumamohan143/my-pr-content1.git']],
                         branches: [[name: "pr${prNumber}"]]
                     ])
                     
